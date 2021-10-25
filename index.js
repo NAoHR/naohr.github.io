@@ -29,7 +29,8 @@ $(document).ready(()=>{
     $("#adjust-right").click(function(){
         if(storedVal.isWhite){
             $(":root").css({
-                "--base-color":"linear-gradient(to left top, #333333, #333333, #343434, #343434, #343434, #353535, #373637, #383738, #3b3a3a, #3e3c3d, #403f3f, #434242)",
+                // "--base-color":"linear-gradient(to left top, #333333, #333333, #343434, #343434, #343434, #353535, #373637, #383738, #3b3a3a, #3e3c3d, #403f3f, #434242)",
+                "--base-color":"#353535",
                 "--text" :"#eee",
                 "--varela" : "'Varela Round', sans-serif",
                 "--poppins": "'Poppins', sans-serif",
