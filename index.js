@@ -3,14 +3,31 @@ $(document).ready(()=>{
         "project" : {
             "isOn" : false
         },
-        "not-decided-yet" : {
+        "project1" : {
             "isOn" : false
         },
+        "isWhite" : true
     }
     console.log("done");
     $('.arrow-wrapper').click(function(){
         
         if(!storedVal[this.id]["isOn"]){
+            $(this).siblings(".real-content").toggle();
+            $(".arrow").css({
+                "transform":"rotate(180deg) translateY(-50%)",
+            });
+            storedVal[this.id]["isOn"] = true;
+        }else{
+            $(".arrow").css({
+                "transform":"rotate(360deg)",
+            });
+            $(this).siblings(".real-content").toggle();
+            storedVal[this.id]["isOn"] = false;
+        }
+    })
+
+    $("#adjust-right").click(function(){
+        if(storedVal.isWhite){
             $(":root").css({
                 "--base-color":"linear-gradient(to left top, #333333, #333333, #343434, #343434, #343434, #353535, #373637, #383738, #3b3a3a, #3e3c3d, #403f3f, #434242)",
                 "--text" :"#eee",
@@ -25,9 +42,23 @@ $(document).ready(()=>{
                 "--border-top":"#eee",
                 "--arrow": "#eee"
             })
-            storedVal[this.id]["isOn"] = true;
+            storedVal.isWhite = false;
         }else{
-            console.log("now off");
+            $(":root").css({
+                "--base-color":"#FAF8FF",
+                "--text":"#595959",
+                "--varela":" 'Varela Round', sans-serif",
+                "--poppins":" 'Poppins', sans-serif",
+                "--sub-h1":"#8685EF",
+                "--head-side":"#eee",
+                "--each-content":"#eee",
+                "--desc-and-real-content":"#e5e5e5",
+                "--arrow-wrapper":" #d9d9d9",
+                "--box-shadow":" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+                "--border-top":"#8685EF",
+                "--arrow":" #8685EF"
+            })
+            storedVal.isWhite = true;
         }
     })
 });
