@@ -28,6 +28,23 @@ $(document).ready(()=>{
 
     $("#adjust-right").click(function(){
         if(storedVal.isWhite){
+
+            $(":root").css({
+                "--base-color":"#f0eaff",
+                "--text":"#595959",
+                "--varela":" 'Varela Round', sans-serif",
+                "--poppins":" 'Poppins', sans-serif",
+                "--sub-h1":"#8685EF",
+                "--head-side":"#f0eaff",
+                "--each-content":"#f0eaff",
+                "--desc-and-real-content":"#e5e5e5",
+                "--arrow-wrapper":"#FAF8FF",
+                "--box-shadow":" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+                "--border-top":"#8685EF",
+                "--arrow":" #8685EF"
+            })
+            storedVal.isWhite = false;
+        }else{
             $(":root").css({
                 // "--base-color":"linear-gradient(to left top, #333333, #333333, #343434, #343434, #343434, #353535, #373637, #383738, #3b3a3a, #3e3c3d, #403f3f, #434242)",
                 "--base-color":"#353535",
@@ -42,22 +59,6 @@ $(document).ready(()=>{
                 "--box-shadow" : "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px",
                 "--border-top":"#eee",
                 "--arrow": "#eee"
-            })
-            storedVal.isWhite = false;
-        }else{
-            $(":root").css({
-                "--base-color":"#FAF8FF",
-                "--text":"#595959",
-                "--varela":" 'Varela Round', sans-serif",
-                "--poppins":" 'Poppins', sans-serif",
-                "--sub-h1":"#8685EF",
-                "--head-side":"#f0eaff",
-                "--each-content":"#f0eaff",
-                "--desc-and-real-content":"#e5e5e5",
-                "--arrow-wrapper":"#FAF8FF",
-                "--box-shadow":" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
-                "--border-top":"#8685EF",
-                "--arrow":" #8685EF"
             })
             storedVal.isWhite = true;
         }
