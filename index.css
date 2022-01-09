@@ -53,6 +53,12 @@ html,body{
     top: 50%;
     transform: translateY(-50%);
 }
+.text-wrapper{
+    width: 100%;
+    border-left: 3px solid var(--sub-h1);
+    padding-left: 5px;
+    font-style: italic;
+}
 .description{
     width: 100%;
     /* background: blue; */
