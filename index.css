@@ -12,6 +12,23 @@
     --border-top:#eee;
     --arrow: #eee;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--sub-h1);
+    border-radius: 6px;
+  }
+
+  
 *{
     padding: 0px;
     margin: 0px;
