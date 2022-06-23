@@ -175,6 +175,7 @@ html,body{
 }
 .tagged-web{
     color: var(--text);
+    text-decoration: underline var(--sub-h1);
 }
 .sub-each-content{
     width: 100%;
